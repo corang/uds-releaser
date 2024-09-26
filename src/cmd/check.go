@@ -39,15 +39,17 @@ var checkCmd = &cobra.Command{
 			return err
 		}
 
-		tagExists, err := utils.DoesTagExist(currentFlavor.Version)
+		versionAndFlavor := fmt.Sprintf("%s-%s", currentFlavor.Version, currentFlavor.Name)
+
+		tagExists, err := utils.DoesTagExist(versionAndFlavor)
 		if err != nil {
 			return err
 		}
 		if tagExists {
-			fmt.Printf("Version %s is already tagged\n", currentFlavor.Version)
+			fmt.Printf("Version %s is already tagged\n", versionAndFlavor)
 			return errors.New("no release necessary")
 		} else {
-			fmt.Printf("Version %s is not tagged\n", currentFlavor.Version)
+			fmt.Printf("Version %s is not tagged\n", versionAndFlavor)
 			return nil
 		}
 	},
