@@ -1,39 +1,21 @@
 package version
 
 import (
-	"errors"
-	"fmt"
-
 	"github.com/corang/uds-releaser/src/types"
 	"github.com/corang/uds-releaser/src/utils"
-	zarf "github.com/zarf-dev/zarf/src/api/v1alpha1"
 	uds "github.com/defenseunicorns/uds-cli/src/types"
+	zarf "github.com/zarf-dev/zarf/src/api/v1alpha1"
 )
 
 func MutateYamls(flavor types.Flavor) error {
-	tagExists, err := utils.DoesTagExist("test")
+	packageName, err := mutateZarfYaml(flavor)
 	if err != nil {
 		return err
 	}
 
-	if tagExists {
-		fmt.Printf("Version %s exists in the git tags\n", flavor.Version)
-		fmt.Print("No release necessary\n")
-
-		return errors.New("version already exists")
-	} else {
-		fmt.Printf("Version %s does not exist in the git tags\n", flavor.Version)
-		fmt.Print("Mutating package and bundle yamls\n")
-
-		packageName, err := mutateZarfYaml(flavor)
-		if err != nil {
-			return err
-		}
-
-		err = mutateBundleYaml(flavor, packageName)
-		if err != nil {
-			return err
-		}
+	err = mutateBundleYaml(flavor, packageName)
+	if err != nil {
+		return err
 	}
 	return nil
 }
