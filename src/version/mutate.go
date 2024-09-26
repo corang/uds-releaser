@@ -7,7 +7,7 @@ import (
 	"github.com/corang/uds-releaser/src/types"
 	"github.com/corang/uds-releaser/src/utils"
 	zarf "github.com/zarf-dev/zarf/src/api/v1alpha1"
-	uds "github.com/corang/uds-cli/src/types"
+	uds "github.com/defenseunicorns/uds-cli/src/types"
 )
 
 func MutateYamls(flavor types.Flavor) error {

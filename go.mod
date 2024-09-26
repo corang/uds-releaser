@@ -3,7 +3,7 @@ module github.com/corang/uds-releaser
 go 1.22.6
 
 require (
-	github.com/corang/uds-cli v0.16.0
+	github.com/defenseunicorns/uds-cli v0.16.0
 	github.com/spf13/cobra v1.8.1
 	github.com/zarf-dev/zarf v0.39.0
 )
