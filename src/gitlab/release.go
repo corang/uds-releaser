@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/defenseunicorns/uds-releaser/src/types"
-	"github.com/defenseunicorns/uds-releaser/src/utils"
+	"github.com/corang/uds-releaser/src/types"
+	"github.com/corang/uds-releaser/src/utils"
 	gitlab "github.com/xanzy/go-gitlab"
 )
 

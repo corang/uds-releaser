@@ -16,8 +16,8 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/defenseunicorns/uds-releaser/src/utils"
-	"github.com/defenseunicorns/uds-releaser/src/version"
+	"github.com/corang/uds-releaser/src/utils"
+	"github.com/corang/uds-releaser/src/version"
 	"github.com/spf13/cobra"
 )
 

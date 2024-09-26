@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/defenseunicorns/uds-releaser/src/types"
-	"github.com/defenseunicorns/uds-releaser/src/utils"
+	"github.com/corang/uds-releaser/src/types"
+	"github.com/corang/uds-releaser/src/utils"
 	zarf "github.com/zarf-dev/zarf/src/api/v1alpha1"
-	uds "github.com/defenseunicorns/uds-cli/src/types"
+	uds "github.com/corang/uds-cli/src/types"
 )
 
 func MutateYamls(flavor types.Flavor) error {

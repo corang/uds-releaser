@@ -44,7 +44,7 @@ changelog:
 # brews:
 #   - name: uds
 #     repository:
-#       owner: defenseunicorns
+#       owner: corang
 #       name: homebrew-tap
 #       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
 #       branch: "{{ .ProjectName }}-{{ .Tag }}"
@@ -52,17 +52,17 @@ changelog:
 #         enabled: true
 #         base:
 #           branch: main
-#           owner: defenseunicorns
+#           owner: corang
 #           name: homebrew-tap
 #     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
-#     homepage: "https://github.com/defenseunicorns/uds-cli"
+#     homepage: "https://github.com/corang/uds-cli"
 #     description: "CLI for Unicorn Delivery Service"
 
 #   # NOTE: We are using .Version instead of .Tag because homebrew has weird semver parsing rules and won't be able to
 #   #       install versioned releases that has a `v` character before the version number.
 #   - name: "uds@{{ .Version }}"
 #     repository:
-#       owner: defenseunicorns
+#       owner: corang
 #       name: homebrew-tap
 #       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
 #       branch: "{{ .ProjectName }}-{{ .Tag }}"
@@ -70,16 +70,16 @@ changelog:
 #         enabled: true
 #         base:
 #           branch: main
-#           owner: defenseunicorns
+#           owner: corang
 #           name: homebrew-tap
 #     commit_msg_template: "Brew formula update for {{ .ProjectName }} versioned release {{ .Tag }}"
-#     homepage: "https://github.com/defenseunicorns/uds-cli"
+#     homepage: "https://github.com/corang/uds-cli"
 #     description: "CLI for Unicorn Delivery Service"
 
 # Generate a GitHub release and publish the release for the tag
 release:
   github:
-    owner: defenseunicorns
+    owner: corang
     name: uds-releaser
   prerelease: auto
   mode: append

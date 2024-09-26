@@ -3,7 +3,7 @@ package utils
 import (
 	"errors"
 
-	"github.com/defenseunicorns/uds-releaser/src/types"
+	"github.com/corang/uds-releaser/src/types"
 )
 
 func GetFlavorConfig(flavor string, config types.ReleaserConfig) (types.Flavor, error) {

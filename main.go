@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/defenseunicorns/uds-releaser/src/cmd"
+import "github.com/corang/uds-releaser/src/cmd"
 
 func main() {
 	cmd.Execute()

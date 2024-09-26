@@ -3,7 +3,7 @@ package utils
 import (
 	"os"
 
-	"github.com/defenseunicorns/uds-releaser/src/types"
+	"github.com/corang/uds-releaser/src/types"
 	goyaml "github.com/goccy/go-yaml"
 )
 
