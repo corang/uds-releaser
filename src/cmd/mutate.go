@@ -37,6 +37,8 @@ var mutateCmd = &cobra.Command{
 			return err
 		}
 
+		rootCmd.SilenceUsage = true
+
 		err = version.MutateYamls(currentFlavor)
 		if err != nil {
 			return err

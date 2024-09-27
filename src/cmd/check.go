@@ -39,6 +39,8 @@ var checkCmd = &cobra.Command{
 			return err
 		}
 
+		rootCmd.SilenceUsage = true
+
 		versionAndFlavor := fmt.Sprintf("%s-%s", currentFlavor.Version, currentFlavor.Name)
 
 		tagExists, err := utils.DoesTagExist(versionAndFlavor)
