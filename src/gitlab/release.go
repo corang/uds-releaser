@@ -50,7 +50,7 @@ func TagAndRelease(flavor types.Flavor) error {
 	fmt.Printf("Default branch: %s\n", defaultBranch)
 
 	// Create a new GitLab client
-	gitlabClient, err := gitlab.NewClient(os.Getenv("CI_JOB_TOKEN"), gitlab.WithBaseURL(gitlabBaseURL))
+	gitlabClient, err := gitlab.NewClient(os.Getenv("GITLAB_TOKEN"), gitlab.WithBaseURL(gitlabBaseURL))
 	if err != nil {
 		return err
 	}
