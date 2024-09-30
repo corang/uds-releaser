@@ -1,6 +1,8 @@
 package version
 
 import (
+	"fmt"
+
 	"github.com/corang/uds-releaser/src/types"
 	"github.com/corang/uds-releaser/src/utils"
 	uds "github.com/defenseunicorns/uds-cli/src/types"
@@ -34,6 +36,8 @@ func mutateZarfYaml(flavor types.Flavor) (packageName string, err error) {
 		return zarfPackage.Metadata.Name, err
 	}
 
+	fmt.Printf("Updated zarf.yaml with version %s\n", flavor.Version)
+
 	return zarfPackage.Metadata.Name, nil
 }
 
@@ -57,5 +61,7 @@ func mutateBundleYaml(flavor types.Flavor, packageName string) error {
 	if err != nil {
 		return err
 	}
+
+	fmt.Printf("Updated uds-bundle.yaml with version %s\n", flavor.Version)
 	return nil
 }
