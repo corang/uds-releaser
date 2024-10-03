@@ -26,7 +26,7 @@ import (
 // checkCmd represents the check command
 var checkCmd = &cobra.Command{
 	Use:   "check [ flavor ]",
-	Short: "check if release is necessary for given flavor",
+	Short: "Check if release is necessary for given flavor",
 	Args:  cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		releaserConfig, err := utils.LoadReleaserConfig()
